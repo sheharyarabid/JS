@@ -1,11 +1,3 @@
-/**
- * This file contains JavaScript code that demonstrates the usage of the Document Object Model (DOM) to manipulate HTML elements.
- * It includes examples of selecting elements, looping through elements, and manipulating the DOM.
- * The code also includes an event listener for form submission and dynamically adding elements to the DOM.
- *
- * @file FILEPATH: /C:/Users/Sheharyar Abid/Desktop/TAKDevs/JS/main.js
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model|Document Object Model (DOM)}
- */
 //DOM - Document object Model
 // console.log(window)
 
