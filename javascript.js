@@ -158,7 +158,7 @@
 // console.log(CompletedTasks)
 // [ 'Take out trash', 'Meeting with boss' ]
 
-
+//  OOPS with JS
 //Constructor Func - DONOT USE ARROW FUNCTIONS AS THEY LACK USE OF this keyword.
 
 // Constructor Func - less memory efficient and ugly! 
@@ -177,25 +177,25 @@
 
 
 // Constructor Func - More memory efficient and Pretier!
-function Person (firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date(dob);
-}
+// function Person (firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+// }
 
 //Makes the method more Memory Efficient and Pretier!
-Person.prototype.getBirthYear = () => {
-    return this.dob.getFullYear();
-  };
+// Person.prototype.getBirthYear = () => {
+//     return this.dob.getFullYear();
+//   };
 
-  Person.prototype.getFullName = () => {
-    return this.firstName + ' ' + this.lastName;
-};
+// Person.prototype.getFullName = () => {
+//     return this.firstName + ' ' + this.lastName;
+// };
   
 
 // Instantiate Obj
-const person1 = new Person ('John','Doe','4-3-1980')
-const person2 = new Person ('John','Bradshaw', '5-2-1978');
+// const person1 = new Person ('John','Doe','4-3-1980')
+// const person2 = new Person ('John','Bradshaw', '5-2-1978');
 
 // console.log(person1);
 // Person { firstName: 'John', lastName: 'Doe', dob: '4-3-1980' }\
@@ -206,3 +206,30 @@ const person2 = new Person ('John','Bradshaw', '5-2-1978');
 // console.log(person1.getBirthYear()); //1980
 // console.log(person1.getFullName()); //John Doe
 // console.log(person2.getFullName()); //John Bradshaw
+
+
+// Class
+
+// class Person {
+//     constructor (firstName, lastName, dob) {
+//             this.firstName = firstName;
+//             this.lastName = lastName;
+//             this.dob = new Date(dob);
+//     }
+
+//     getBirthYear() {
+//         return this.dob.getFullYear();
+//     }
+//     getFullName()  {
+//         return this.firstName + ' ' + this.lastName;
+//     }
+
+// }
+// // creating objects for the class
+// const person1 = new Person ('John','Doe','4-3-1980')
+// const person2 = new Person ('John','Bradshaw', '5-2-1978');
+// const person3 = new Person('Jane', 'Smith', '10-15-1990');
+
+// console.log(person3.getFullName()); // Jane Smith
+// console.log(person3.getBirthYear()); // 1990
+
