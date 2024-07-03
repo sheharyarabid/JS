@@ -1,3 +1,47 @@
+
+// alert('Hello World'); // Do not use for debugging. Stops script and only strings
+// console.log('Hello World');
+// console.error('This is an error');
+// console.warn('This is a warning');
+
+
+// // VARIABLES
+// let age = 35;
+
+// // let can be re-assigned, const can not
+// age = 20;
+
+
+// // DATA TYPES - String, Number, Boolean, null, undefined
+// const name = 'Brad';
+// const age = 37;
+// const rating = 3.5;
+// const isCool = true;
+// const x = null;
+// const y = undefined;
+// let z; // undefined
+
+// // Check type
+// console.log(typeof z);
+
+
+// // STRINGS
+
+// // Concatenation
+// console.log('My name is ' + name + ' and I am ' + age);
+// // Template literal 
+// console.log(`My name is ${name} and I am ${age}`);
+
+// // String methods & properties
+// const s = 'Hello World';
+// let val;
+// // Get length
+// val = s.length;
+// // Change case
+// val = s.toUpperCase();
+// val = s.toLowerCase();
+
+
 // let h = 'hello world';
 // let i = h.substring(0,5);
 // console.log(i); //hello
@@ -221,7 +265,7 @@
 //         return this.dob.getFullYear();
 //     }
 //     getFullName()  {
-//         return this.firstName + ' ' + this.lastName;
+//         return `${this.firstName} ${this.lastName}`; //more efficient way
 //     }
 
 // }
@@ -232,4 +276,6 @@
 
 // console.log(person3.getFullName()); // Jane Smith
 // console.log(person3.getBirthYear()); // 1990
+
+
 
