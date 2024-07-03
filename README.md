@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code and files for my javascript practice of javascript crash course.
+This repository contains the source code and files of my javascript refresher course.
 
 ## Files and Topics
 
