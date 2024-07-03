@@ -159,11 +159,13 @@
 // [ 'Take out trash', 'Meeting with boss' ]
 
 
-// Constructor Func
-function Person(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date(dob);
+//Constructor Func - DONOT USE ARROW FUNCTIONS AS THEY LACK USE OF this keyword.
+
+// Constructor Func - less memory efficient and ugly! 
+// function Person (firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
     
 //     this.getBirthYear = function() {
 //         return this.dob.getFullYear()
@@ -174,20 +176,33 @@ function Person(firstName, lastName, dob) {
 // }
 
 
+// Constructor Func - More memory efficient and Pretier!
+function Person (firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+
+//Makes the method more Memory Efficient and Pretier!
+Person.prototype.getBirthYear = () => {
+    return this.dob.getFullYear();
+  };
+
+  Person.prototype.getFullName = () => {
+    return this.firstName + ' ' + this.lastName;
+};
+  
+
 // Instantiate Obj
 const person1 = new Person ('John','Doe','4-3-1980')
+const person2 = new Person ('John','Bradshaw', '5-2-1978');
+
 // console.log(person1);
 // Person { firstName: 'John', lastName: 'Doe', dob: '4-3-1980' }\
-
-const person2 = new Person ('John','Bradshaw', '5-2-1978');
 // console.log(person2);
 // Person { firstName: 'John', lastName: 'Bradshaw', dob: '5-2-1978' }
-
 // console.log(person2.dob.getFullYear());  // 1978
 // make sure that date of birth is intialized as a new Date!! otherwise wont work
-
-console.log(person1.getBirthYear()); //1980
-
-console.log(person1.getFullName()); //John Doe
-console.log(person2.getFullName()); //John Bradshaw
-
+// console.log(person1.getBirthYear()); //1980
+// console.log(person1.getFullName()); //John Doe
+// console.log(person2.getFullName()); //John Bradshaw
