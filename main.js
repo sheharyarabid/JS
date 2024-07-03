@@ -1,3 +1,11 @@
+/**
+ * This file contains JavaScript code that demonstrates the usage of the Document Object Model (DOM) to manipulate HTML elements.
+ * It includes examples of selecting elements, looping through elements, and manipulating the DOM.
+ * The code also includes an event listener for form submission and dynamically adding elements to the DOM.
+ *
+ * @file FILEPATH: /C:/Users/Sheharyar Abid/Desktop/TAKDevs/JS/main.js
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model|Document Object Model (DOM)}
+ */
 //DOM - Document object Model
 // console.log(window)
 
@@ -51,9 +59,58 @@ let btn = document.querySelector('.btn'); //takes single value
 //     e.target.className = 'btn1'
 // })
 
-btn.addEventListener('click',(e)=>{
-    e.preventDefault();
-    document.querySelector('#my-form').style.background = '#ccc'; //changes background
-    document.querySelector('body').classList.add('bg-dark'); // adds a new class for tag body
-})
+// btn.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     document.querySelector('#my-form').style.background = '#ccc'; //changes background
+//     document.querySelector('body').classList.add('bg-dark'); // adds a new class for tag body
+//     document.querySelector('.items').innerHTML ='<h1>Hello</h1>'
+// })
 
+// btn.addEventListener('mousein',(e)=>{
+//     e.preventDefault();
+//     document.querySelector('#my-form').style.background = '#ccc'; //changes background
+//     document.querySelector('body').classList.add('bg-dark'); // adds a new class for tag body
+//     document.querySelector('.items').innerHTML ='<h1>Hello</h1>'
+// })
+
+// btn.addEventListener('mouseover',(e)=>{
+//     e.preventDefault();
+//     document.querySelector('#my-form').style.background = '#ccc'; //changes background
+//     document.querySelector('body').classList.add('bg-dark'); // adds a new class for tag body
+//     document.querySelector('.items').innerHTML ='<h1>Hello</h1>'
+// })
+
+// assign js variables for all elements
+const myform = document.querySelector('#my-form')
+const nameInput = document.querySelector('#name')
+const emailInput = document.querySelector('#email')
+const msg = document.querySelector('.msg')
+const userList = document.querySelector('#users')
+
+// defining a onSubmit function
+onSubmit = (e) => {
+    e.preventDefault(); //disable default scripts
+
+    if(nameInput.value === ''|| emailInput.value === '') { //checks for empty fields
+        msg.innerHTML = 'Please enter all fields!' //msg appears
+        msg.classList.add('error') //msg style gets loaded
+        setTimeout(()=>{msg.remove()},3000) // msg timeouts after 3s
+    }
+    else {
+    console.log('success')
+    console.log(nameInput.value)
+    console.log(emailInput.value)
+    const li = document.createElement('li'); //assining new list element to variable li
+    li.appendChild(document.createTextNode( // a new text node with name and email is created saved as a child of li element
+        `${nameInput.value} : ${emailInput.value}`
+    ))
+    userList.appendChild(li); // li appends to main ul element
+
+    //clear the fields afterwards
+    nameInput.value = ''; 
+    emailInput.value = '';
+
+    }
+
+}
+myform.addEventListener('submit',onSubmit);
