@@ -59,6 +59,17 @@
     border-radius: 5px;
     margin: 5px 0;
   }
+
+  .btn1{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: darkblue;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
   
   .btn:hover {
     background: #444;

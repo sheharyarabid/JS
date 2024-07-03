@@ -41,3 +41,19 @@ let btn = document.querySelector('.btn'); //takes single value
 //     console.log('I\'m clicked')
 // })
 
+// btn.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     e.target.value = 'Changed Wow'
+// })
+
+// btn.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     e.target.className = 'btn1'
+// })
+
+btn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc'; //changes background
+    document.querySelector('body').classList.add('bg-dark'); // adds a new class for tag body
+})
+
